@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400&family=Raleway:wght@300;500;700&display=swap');
+
+*, *::after, *::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html { 
+    font-size: 15px; 
+}
+
+.modo-contraste{
+    background-color: #070707;
+    color: #fff;
+}
+
+.rodape-contraste {
+    background-color: #fff;
+    color: #070707;
+}
+
+body {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: gainsboro;
+    /* Solução para o rodapé */
+    /* Etapa 1: colocar o body em modo flex e definir altura mínima usando a viewport como referência*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    /* Etapa 2: fazer o main ocupar todo o espaço necessário para empurrar o rodapé para baixo */
+    flex: 1;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 a {
+    background-color: #070707;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+}
+
+header {
+    background-color: #FF4500;
+    text-transform: uppercase;
+
+    /* Deixar o cabeçalho fixo */
+    position: sticky;
+    top: 0;
+}
+
+header .limitador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+.limitador {
+    max-width: 1100px;
+    margin: auto;
+    width: 95%;
+}
+
+/* Regras para o texto/link menu */
+nav h2 {
+    text-align: right;
+}
+
+nav h2 a {
+    color: #070707;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+nav h2 a:hover,
+nav h2 a:focus,
+.links-menu a:hover,
+.links-menu a:focus {
+    border: #070707 1px solid;
+    border-radius: 5px;
+}
+
+.links-menu {
+    background-color: #FF4500;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    /* Esta propriedade será
+    usada posteriormente para esconder
+    a lista */
+    display: none;
+}
+
+.links-menu a {
+    color: #070707;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Obs.: esta regra será aplicada com o auxílio de programação JavaScript */
+.links-menu.aberto {
+    /* Neste ponto, usamos o flex pra voltar
+    a exibir o menu (quando aberto) */
+    display: flex;
+
+    /* E fazemos com que os links apareçam 
+    verticalmente */
+    flex-direction: column;
+
+    /* Usamos position e coordenadas
+    para garantir o posicionamento 
+    correto do menu quando aberto */
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+nav ul li ul {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    list-style: none;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+.dropdow ul li {
+    width: auto;
+    border-radius: 4px;
+}
+
+
+h3 {
+    margin: 1rem;
+}
+
+h4 {
+    margin: 0.7rem;
+}
+
+.pcd {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #070707;
+    height: 38px;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+a img {
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.passeios {
+    margin: 0.5rem 1rem;
+}
+
+.aventuras {
+    margin: 0.5rem 1rem;
+}
+
+.hospedagem {
+    background-color: #c72434;
+    margin: 1rem 2rem;
+    padding: 1rem 0rem;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.hospedagem_buttom {
+    background-color: #070707;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: normal;
+    border-radius: 15px;
+}
+
+.hospedagem_buttom:hover {
+    background-color: #fff;
+    color: #070707;
+    font-weight: normal;
+}
+.header_color{
+    background-color: #FF4500;
+    
+}
+
+.contato {
+    /* margin: 1rem 2rem; */
+    width: 450px; 
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 1rem 0rem;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato_buttom {
+    background-color: #070707;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-weight: normal;
+    border-radius: 15px;
+}
+
+.contato_buttom:hover {
+    background-color: #fff;
+    color: #070707;
+    font-weight: normal;
+}
+
+.contato_imput {
+    display: block;
+    height: 30px;
+    width: 450px;
+    margin-bottom: 5px;
+    color: black;
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+
+.contato_textarea {
+    display: block;
+    margin-bottom: 5px;
+    justify-content: center;
+    width: 450px;
+    border-radius: 5px;
+}
+
+
+.icons{
+    /* font-weight: 100vw; */
+    font-size: 10vh;
+    
+}
+figure img {
+    padding-top: 1rem;
+    max-width: 100%;
+}
+
+form {
+    flex-direction: column;
+    justify-content: center;
+    display: block;
+}
+
+
+button {
+    background-color: #070707;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-weight: normal;
+    border-radius: 15px;
+}
+
+.btn-pcd {
+    color: #fff;
+    background-color: #c72434;
+    font-weight: bold;
+    padding: 0.2rem 0.7rem;
+    margin: 0.5rem;
+    font-size: large;
+}
+
+.btn-pcd:hover {
+    color: #070707;
+    background-color: #fff;
+}
+
+footer {
+    background-color: #070707;
+    color: #fff;
+    font-weight: normal;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.devs {
+    margin: 10px;
+}
+
+.devs_names {
+    list-style: none;
+    margin: 10px;
+}
+
+.direitos {
+    text-align: center;
+    font-weight: normal;
+}
+
+/* .image-contraste{
+    max-width: 20px;
+    max-height: 20px;
+
+} */
+figcaption{
+    width: 250px;
+    height: 200px;
+}
+
+/* media query para alterar o menu */
+@media screen and (max-width: 530px) {
+    nav ul li:hover ul{
+    display: block;
+    flex-direction: column;
+    width: 100%;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    nav {
+        width: 70%;
+    }
+
+    nav h2 {
+        display: none;
+    }
+
+    .links-menu {
+        display: flex;
+    }
+
+    .links-menu li {
+        width: 100%;
+    }
+}
+
+/* media query para alterar o tamanho do font-size */
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 18px;
+    }
+}
+
